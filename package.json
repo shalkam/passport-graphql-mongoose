@@ -2,7 +2,7 @@
   "name": "passport-local-mongoose",
   "description": "Mongoose plugin that simplifies building username and password login with Passport",
   "version": "4.0.0",
-  "main": "index.js",
+  "main": "dist/index.js",
   "repository": "saintedlama/passport-local-mongoose",
   "author": "Christoph Walcher <christoph.walcher@gmail.com>",
   "license": "MIT",
@@ -16,11 +16,7 @@
     "node": ">= 0.12"
   },
   "dependencies": {
-    "debug": "^2.5.1",
-    "generaterr": "^1.5.0",
-    "passport-local": "^1.0.0",
-    "scmp": "^2.0.0",
-    "semver": "^5.3.0"
+    "debug": "^2.5.1"
   },
   "devDependencies": {
     "chai": "^3.5.0",
@@ -28,12 +24,17 @@
     "cross-env": "^2.0.0",
     "istanbul": "^0.4.5",
     "mocha": "^3.2.0",
+    "generaterr": "^1.2.0",
     "mocha-lcov-reporter": "^1.2.0",
     "mongoose": "^4.7.4",
-    "shelljs": "^0.7.5"
+    "passport-local": "^1.0.0",
+    "password-hash-and-salt": "^0.1.4",
+    "shelljs": "^0.7.5",
+    "webpack": "2"
   },
   "scripts": {
     "test": "cross-env NODE_ENV=test mocha -R spec test/",
+    "build": "webpack",
     "cover": "cross-env NODE_ENV=test istanbul cover ./node_modules/mocha/bin/_mocha --report html -- -R spec",
     "release": "node release.js"
   }
