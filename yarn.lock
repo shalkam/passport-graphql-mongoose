@@ -1579,6 +1579,12 @@ passport-local@^1.0.0:
   dependencies:
     passport-strategy "1.x.x"
 
+"passport-local@github:shalkam/passport-local":
+  version "1.0.0"
+  resolved "https://codeload.github.com/shalkam/passport-local/tar.gz/9db9f3089ae7ccc0bbc618360f2e860988fa6136"
+  dependencies:
+    passport-strategy "1.x.x"
+
 passport-strategy@1.x.x:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/passport-strategy/-/passport-strategy-1.0.0.tgz#b5539aa8fc225a3d1ad179476ddf236b440f52e4"
