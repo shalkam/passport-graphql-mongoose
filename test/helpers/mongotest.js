@@ -1,6 +1,6 @@
 var assert = require('assert');
 var mongoose = require('mongoose');
-var debug = require('debug')('passport:local:mongoose');
+var debug = require('debug')('passport:graphql:mongoose');
 
 module.exports = {
   prepareDb: function(connectionString, options) {
@@ -22,8 +22,12 @@ module.exports = {
           assert.ifError(err);
 
           var collectionsToDrop = collections
-            .filter(function(col) { return col.collectionName.indexOf('system.') != 0; })
-            .map(function(col) { return col.collectionName; });
+            .filter(function(col) {
+              return col.collectionName.indexOf('system.') != 0;
+            })
+            .map(function(col) {
+              return col.collectionName;
+            });
 
           debug('Dropping non system collections...');
           dropCollections(collectionsToDrop, 0, cb);
@@ -31,16 +35,15 @@ module.exports = {
       });
     };
   },
-
   disconnect: function() {
     return function(cb) {
       mongoose.disconnect(cb);
-    }
+    };
   }
 };
 
 function dropCollections(collections, index, cb) {
-  if (typeof(index) == 'function') {
+  if (typeof index == 'function') {
     cb = index;
     index = 0;
   }

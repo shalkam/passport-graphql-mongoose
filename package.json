@@ -1,12 +1,13 @@
 {
-  "name": "passport-local-mongoose",
-  "description": "Mongoose plugin that simplifies building username and password login with Passport",
+  "name": "passport-graphql-mongoose",
+  "description": "A Graphql compatible Mongoose plugin that simplifies building username and password login with Passport",
   "version": "4.0.0",
   "main": "dist/index.js",
-  "repository": "shalkam/passport-local-mongoose",
-  "author": "Christoph Walcher <christoph.walcher@gmail.com>",
+  "repository": "shalkam/passport-graphql-mongoose",
+  "author": "Mostafa Sholkamy <shalkamm@gmail.com>",
   "license": "MIT",
   "keywords": [
+    "graphql",
     "mongoose",
     "passport",
     "authentication",
@@ -15,10 +16,9 @@
   "engines": {
     "node": ">= 0.12"
   },
-  "dependencies": {
-    "debug": "^2.5.1"
-  },
+  "dependencies": {},
   "devDependencies": {
+    "debug": "^2.5.1",
     "chai": "^3.5.0",
     "coveralls": "^2.11.15",
     "cross-env": "^2.0.0",
